@@ -2,8 +2,30 @@
     Section 1
 ============= */
 #section-1{
-    .grid-content{
-        
+    background-image: url('../img/section-1/hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 560px;
+    text-align: center;
+
+    @include md{
+        height: 700px;
     }
 
+    @include lg{
+        height: 800px;
+    }
+
+    @include xl{
+        height: 960px;
+    }
+
+    a{
+        p{
+            border: 2px solid $white;
+            border-radius: 30px;
+            color: $white;
+        }
+    }
 }

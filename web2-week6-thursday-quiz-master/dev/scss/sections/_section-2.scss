@@ -1,0 +1,66 @@
+/* =============
+    Section 2
+============= */
+#section-2{
+
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
+    >div{
+
+        @include md{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "section-2-inside section-2-inside aside";
+        }
+
+        @include lg{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "aside section-2-inside";
+        }
+
+        #section-2-inside{
+            background-color: $light-grey;
+            display: grid;
+            grid-template-columns: 10px auto 10px;
+            grid-template-areas: ". article .";
+
+            @include md{
+                grid-area: section-2-inside;
+            }
+
+            #article{
+                grid-area: article;
+
+                p{
+                    text-align: justify;
+                }
+
+                @include md{
+                    p{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        #aside{
+            background-image: url('../img/section-2/shoes.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 320px;
+            
+            @include md{
+                grid-area: aside;
+                height: 246px;
+            }
+
+            @include lg{
+                height: 600px;
+            }
+        }
+    }
+        
+}
