@@ -459,7 +459,7 @@ textarea {
       text-align: justify; }
     @media (min-width: 768px) {
       #section-2 > div #section-2-inside #article p {
-        text-align: right; } }
+        text-align: left; } }
 #section-2 > div #aside {
   background-image: url("../img/section-2/shoes.jpg");
   background-position: center;
