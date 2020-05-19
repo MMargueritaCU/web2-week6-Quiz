@@ -8,6 +8,7 @@
     }
 
     >div{
+        background-color: $light-grey;
 
         @include md{
             display: grid;
@@ -21,8 +22,11 @@
             grid-template-areas: "aside section-2-inside";
         }
 
+        @include xl{
+            padding: 0 120px;
+        }
+
         #section-2-inside{
-            background-color: $light-grey;
             display: grid;
             grid-template-columns: 10px auto 10px;
             grid-template-areas: ". article .";

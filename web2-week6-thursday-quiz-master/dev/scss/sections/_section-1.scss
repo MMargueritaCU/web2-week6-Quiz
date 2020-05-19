@@ -28,6 +28,7 @@
             color: $light-blue;
             font-size: rem-calc(16);
             line-height: rem-calc(18);
+            padding-bottom: 75px;
 
             @include md{
                 font-size: rem-calc(25);
@@ -41,22 +42,33 @@
         }
     
         a{
+            border: 2px solid $white;
+            border-radius: 50%;
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+
+            @include lg{
+                height: 150px;
+                width: 150px;
+            }
+
             p{
-                border: 2px solid $white;
-                border-radius: 30px;
                 color: $white;
                 font-size: rem-calc(18);
                 line-height: rem-calc(20);
-                width: 100%;
-
+                padding-top: 20px;
+    
                 @include md{
                     font-size: rem-calc(23);
                     line-height: rem-calc(28);
+                    padding-top: 10px;
                 }
 
                 @include lg{
                     font-size: rem-calc(32);
                     line-height: rem-calc(38);
+                    padding-top: 25px;
                 }
             }
         }

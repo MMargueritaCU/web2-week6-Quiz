@@ -443,7 +443,8 @@ textarea {
     #section-1 > div p {
       color: #338595;
       font-size: 1rem;
-      line-height: 1.125rem; }
+      line-height: 1.125rem;
+      padding-bottom: 75px; }
       @media (min-width: 768px) {
         #section-1 > div p {
           font-size: 1.5625rem;
@@ -452,21 +453,31 @@ textarea {
         #section-1 > div p {
           font-size: 2rem;
           line-height: 2.125rem; } }
-    #section-1 > div a p {
+    #section-1 > div a {
       border: 2px solid #fff;
-      border-radius: 30px;
-      color: #fff;
-      font-size: 1.125rem;
-      line-height: 1.25rem;
-      width: 100%; }
-      @media (min-width: 768px) {
-        #section-1 > div a p {
-          font-size: 1.4375rem;
-          line-height: 1.75rem; } }
+      border-radius: 50%;
+      display: inline-block;
+      height: 100px;
+      width: 100px; }
       @media (min-width: 992px) {
-        #section-1 > div a p {
-          font-size: 2rem;
-          line-height: 2.375rem; } }
+        #section-1 > div a {
+          height: 150px;
+          width: 150px; } }
+      #section-1 > div a p {
+        color: #fff;
+        font-size: 1.125rem;
+        line-height: 1.25rem;
+        padding-top: 20px; }
+        @media (min-width: 768px) {
+          #section-1 > div a p {
+            font-size: 1.4375rem;
+            line-height: 1.75rem;
+            padding-top: 10px; } }
+        @media (min-width: 992px) {
+          #section-1 > div a p {
+            font-size: 2rem;
+            line-height: 2.375rem;
+            padding-top: 25px; } }
 /* =============
     Section 2
 ============= */
@@ -474,67 +485,69 @@ textarea {
   #section-2 {
     grid-template-columns: auto 1200px auto; } }
 
-@media (min-width: 768px) {
-  #section-2 > div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "section-2-inside section-2-inside aside"; } }
-
-@media (min-width: 992px) {
-  #section-2 > div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "aside section-2-inside"; } }
-
-#section-2 > div #section-2-inside {
-  background-color: #EEEEEE;
-  display: grid;
-  grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". article ."; }
+#section-2 > div {
+  background-color: #EEEEEE; }
   @media (min-width: 768px) {
-    #section-2 > div #section-2-inside {
-      grid-area: section-2-inside; } }
-  #section-2 > div #section-2-inside #article {
-    grid-area: article;
-    padding-top: 30px;
-    padding-bottom: 100px; }
-    #section-2 > div #section-2-inside #article h2 {
-      font-size: 2.1875rem;
-      line-height: 2.6875rem;
-      text-align: center; }
-    #section-2 > div #section-2-inside #article p {
-      font-size: 1rem;
-      line-height: 1.3125rem;
-      text-align: justify; }
-    @media (min-width: 768px) {
-      #section-2 > div #section-2-inside #article {
-        padding: 0px; }
-        #section-2 > div #section-2-inside #article h2 {
-          text-align: left; }
-        #section-2 > div #section-2-inside #article p {
-          text-align: left; } }
-    @media (min-width: 992px) {
-      #section-2 > div #section-2-inside #article {
-        padding: 75px; }
-        #section-2 > div #section-2-inside #article h2 {
-          font-size: 2.8125rem;
-          line-height: 3.4375rem; }
-        #section-2 > div #section-2-inside #article p {
-          font-size: 1.25rem;
-          line-height: 1.8125rem; } }
-#section-2 > div #aside {
-  background-image: url("../img/section-2/shoes.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 320px; }
-  @media (min-width: 768px) {
-    #section-2 > div #aside {
-      grid-area: aside;
-      height: 246px; } }
+    #section-2 > div {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "section-2-inside section-2-inside aside"; } }
   @media (min-width: 992px) {
-    #section-2 > div #aside {
-      height: 600px; } }
+    #section-2 > div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "aside section-2-inside"; } }
+  @media (min-width: 1200px) {
+    #section-2 > div {
+      padding: 0 120px; } }
+  #section-2 > div #section-2-inside {
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-areas: ". article ."; }
+    @media (min-width: 768px) {
+      #section-2 > div #section-2-inside {
+        grid-area: section-2-inside; } }
+    #section-2 > div #section-2-inside #article {
+      grid-area: article;
+      padding-top: 30px;
+      padding-bottom: 100px; }
+      #section-2 > div #section-2-inside #article h2 {
+        font-size: 2.1875rem;
+        line-height: 2.6875rem;
+        text-align: center; }
+      #section-2 > div #section-2-inside #article p {
+        font-size: 1rem;
+        line-height: 1.3125rem;
+        text-align: justify; }
+      @media (min-width: 768px) {
+        #section-2 > div #section-2-inside #article {
+          padding: 0px; }
+          #section-2 > div #section-2-inside #article h2 {
+            text-align: left; }
+          #section-2 > div #section-2-inside #article p {
+            text-align: left; } }
+      @media (min-width: 992px) {
+        #section-2 > div #section-2-inside #article {
+          padding: 75px; }
+          #section-2 > div #section-2-inside #article h2 {
+            font-size: 2.8125rem;
+            line-height: 3.4375rem; }
+          #section-2 > div #section-2-inside #article p {
+            font-size: 1.25rem;
+            line-height: 1.8125rem; } }
+  #section-2 > div #aside {
+    background-image: url("../img/section-2/shoes.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px; }
+    @media (min-width: 768px) {
+      #section-2 > div #aside {
+        grid-area: aside;
+        height: 246px; } }
+    @media (min-width: 992px) {
+      #section-2 > div #aside {
+        height: 600px; } }
 /* =============
     Section 3
 ============= */
