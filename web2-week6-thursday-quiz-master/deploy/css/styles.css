@@ -338,11 +338,24 @@ ul {
     Typography
 ============= */
 h1 {
+  color: #1A4B58;
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.6875rem; }
-
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 2.375rem;
+      font-weight: 400;
+      line-height: 2.875rem; } }
+  @media (min-width: 992px) {
+    h1 {
+      font-size: 3.75rem;
+      line-height: 4.5rem; } }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4.375rem;
+      line-height: 5rem; } }
 h2, h3, h4 {
   font-family: 'Montserrat', sans-serif; }
 
@@ -384,7 +397,11 @@ textarea {
   @media (min-width: 992px) {
     #footer div {
       display: flex;
-      justify-content: space-between; } }
+      justify-content: space-between;
+      padding: 0 20px; } }
+  @media (min-width: 1200px) {
+    #footer div {
+      padding: 0 80px; } }
   #footer div ul {
     display: flex;
     justify-content: center;
@@ -410,8 +427,7 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 560px;
-  text-align: center; }
+  height: 560px; }
   @media (min-width: 768px) {
     #section-1 {
       height: 700px; } }
@@ -421,11 +437,36 @@ textarea {
   @media (min-width: 1200px) {
     #section-1 {
       height: 960px; } }
-  #section-1 a p {
-    border: 2px solid #fff;
-    border-radius: 30px;
-    color: #fff; }
-
+  #section-1 > div {
+    padding-top: 75px;
+    text-align: center; }
+    #section-1 > div p {
+      color: #338595;
+      font-size: 1rem;
+      line-height: 1.125rem; }
+      @media (min-width: 768px) {
+        #section-1 > div p {
+          font-size: 1.5625rem;
+          line-height: 1.8125rem; } }
+      @media (min-width: 768px) {
+        #section-1 > div p {
+          font-size: 2rem;
+          line-height: 2.125rem; } }
+    #section-1 > div a p {
+      border: 2px solid #fff;
+      border-radius: 30px;
+      color: #fff;
+      font-size: 1.125rem;
+      line-height: 1.25rem;
+      width: 100%; }
+      @media (min-width: 768px) {
+        #section-1 > div a p {
+          font-size: 1.4375rem;
+          line-height: 1.75rem; } }
+      @media (min-width: 992px) {
+        #section-1 > div a p {
+          font-size: 2rem;
+          line-height: 2.375rem; } }
 /* =============
     Section 2
 ============= */
@@ -454,12 +495,33 @@ textarea {
     #section-2 > div #section-2-inside {
       grid-area: section-2-inside; } }
   #section-2 > div #section-2-inside #article {
-    grid-area: article; }
+    grid-area: article;
+    padding-top: 30px;
+    padding-bottom: 100px; }
+    #section-2 > div #section-2-inside #article h2 {
+      font-size: 2.1875rem;
+      line-height: 2.6875rem;
+      text-align: center; }
     #section-2 > div #section-2-inside #article p {
+      font-size: 1rem;
+      line-height: 1.3125rem;
       text-align: justify; }
     @media (min-width: 768px) {
-      #section-2 > div #section-2-inside #article p {
-        text-align: left; } }
+      #section-2 > div #section-2-inside #article {
+        padding: 0px; }
+        #section-2 > div #section-2-inside #article h2 {
+          text-align: left; }
+        #section-2 > div #section-2-inside #article p {
+          text-align: left; } }
+    @media (min-width: 992px) {
+      #section-2 > div #section-2-inside #article {
+        padding: 75px; }
+        #section-2 > div #section-2-inside #article h2 {
+          font-size: 2.8125rem;
+          line-height: 3.4375rem; }
+        #section-2 > div #section-2-inside #article p {
+          font-size: 1.25rem;
+          line-height: 1.8125rem; } }
 #section-2 > div #aside {
   background-image: url("../img/section-2/shoes.jpg");
   background-position: center;
@@ -476,50 +538,132 @@ textarea {
 /* =============
     Section 3
 ============= */
+@media (min-width: 1200px) {
+  #section-3 {
+    grid-template-columns: auto 1200px auto; } }
+
+#section-3 > section div h2 {
+  font-size: 2.1875rem;
+  line-height: 2.6875rem;
+  text-align: center; }
+  @media (min-width: 992px) {
+    #section-3 > section div h2 {
+      font-size: 2.8125rem;
+      line-height: 3.4375rem; } }
 @media (min-width: 768px) {
   #section-3 > section #section-3-inside {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "top middle"; } }
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "top top middle middle" ". bottom bottom ."; } }
 
-#section-3 > section #top #img {
-  background-image: url("../img/section-3/img.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px; }
+@media (min-width: 992px) {
+  #section-3 > section #section-3-inside {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "top middle bottom"; } }
 
-#section-3 > section #top > div {
-  background-color: #EEEEEE; }
-
-@media (min-width: 768px) {
-  #section-3 > section #top {
-    grid-area: top; } }
-
-#section-3 > section #middle #img2 {
-  background-image: url("../img/section-3/letterpress.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px; }
-
-#section-3 > section #middle > div {
-  background-color: #EEEEEE; }
-
-@media (min-width: 768px) {
-  #section-3 > section #middle {
-    grid-area: middle; } }
-
-#section-3 > section #bottom #img3 {
-  background-image: url("../img/section-3/cards.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px; }
-
-#section-3 > section #bottom > div {
-  background-color: #EEEEEE; }
-
-@media (min-width: 768px) {
-  #section-3 > section #bottom {
-    grid-area: bottom; } }
+#section-3 > section #section-3-inside #top {
+  padding: 0 20px; }
+  #section-3 > section #section-3-inside #top #img {
+    background-image: url("../img/section-3/img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px; }
+    @media (min-width: 768px) {
+      #section-3 > section #section-3-inside #top #img {
+        height: 300px; } }
+    @media (min-width: 992px) {
+      #section-3 > section #section-3-inside #top #img {
+        height: 200px; } }
+  #section-3 > section #section-3-inside #top > div {
+    background-color: #EEEEEE;
+    margin-top: -30px; }
+    #section-3 > section #section-3-inside #top > div h3 {
+      font-size: 1.5rem;
+      line-height: 1.8125rem;
+      padding-top: 30px;
+      text-align: center; }
+      @media (min-width: 992px) {
+        #section-3 > section #section-3-inside #top > div h3 {
+          font-size: 1.75rem;
+          line-height: 2.1875rem; } }
+    #section-3 > section #section-3-inside #top > div p {
+      font-size: 1rem;
+      line-height: 1.1875rem;
+      padding: 0 20px; }
+    #section-3 > section #section-3-inside #top > div h4 {
+      padding: 20px; }
+  @media (min-width: 768px) {
+    #section-3 > section #section-3-inside #top {
+      grid-area: top; } }
+#section-3 > section #section-3-inside #middle {
+  padding: 0 20px; }
+  #section-3 > section #section-3-inside #middle #img2 {
+    background-image: url("../img/section-3/letterpress.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px; }
+    @media (min-width: 768px) {
+      #section-3 > section #section-3-inside #middle #img2 {
+        height: 300px; } }
+    @media (min-width: 992px) {
+      #section-3 > section #section-3-inside #middle #img2 {
+        height: 200px; } }
+  #section-3 > section #section-3-inside #middle > div {
+    background-color: #EEEEEE;
+    margin-top: -30px; }
+    #section-3 > section #section-3-inside #middle > div h3 {
+      font-size: 1.5rem;
+      line-height: 1.8125rem;
+      padding-top: 30px;
+      text-align: center; }
+      @media (min-width: 992px) {
+        #section-3 > section #section-3-inside #middle > div h3 {
+          font-size: 1.75rem;
+          line-height: 2.1875rem; } }
+    #section-3 > section #section-3-inside #middle > div p {
+      font-size: 1rem;
+      line-height: 1.1875rem;
+      padding: 0 20px; }
+    #section-3 > section #section-3-inside #middle > div h4 {
+      padding: 20px; }
+  @media (min-width: 768px) {
+    #section-3 > section #section-3-inside #middle {
+      grid-area: middle; } }
+#section-3 > section #section-3-inside #bottom {
+  padding: 0 20px; }
+  #section-3 > section #section-3-inside #bottom #img3 {
+    background-image: url("../img/section-3/cards.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px; }
+    @media (min-width: 768px) {
+      #section-3 > section #section-3-inside #bottom #img3 {
+        height: 300px; } }
+    @media (min-width: 992px) {
+      #section-3 > section #section-3-inside #bottom #img3 {
+        height: 200px; } }
+  #section-3 > section #section-3-inside #bottom > div {
+    background-color: #EEEEEE;
+    margin-top: -30px; }
+    #section-3 > section #section-3-inside #bottom > div h3 {
+      font-size: 1.5rem;
+      line-height: 1.8125rem;
+      padding-top: 30px;
+      text-align: center; }
+      @media (min-width: 992px) {
+        #section-3 > section #section-3-inside #bottom > div h3 {
+          font-size: 1.75rem;
+          line-height: 2.1875rem; } }
+    #section-3 > section #section-3-inside #bottom > div p {
+      font-size: 1rem;
+      line-height: 1.1875rem;
+      padding: 0 20px; }
+    #section-3 > section #section-3-inside #bottom > div h4 {
+      padding: 20px; }
+  @media (min-width: 768px) {
+    #section-3 > section #section-3-inside #bottom {
+      grid-area: bottom; } }

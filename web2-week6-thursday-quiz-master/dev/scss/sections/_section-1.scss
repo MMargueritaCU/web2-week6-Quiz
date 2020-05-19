@@ -7,7 +7,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 560px;
-    text-align: center;
 
     @include md{
         height: 700px;
@@ -21,11 +20,45 @@
         height: 960px;
     }
 
-    a{
+    >div{
+        padding-top: 75px;
+        text-align: center;
+
         p{
-            border: 2px solid $white;
-            border-radius: 30px;
-            color: $white;
+            color: $light-blue;
+            font-size: rem-calc(16);
+            line-height: rem-calc(18);
+
+            @include md{
+                font-size: rem-calc(25);
+                line-height: rem-calc(29);
+            }
+
+            @include md{
+                font-size: rem-calc(32);
+                line-height: rem-calc(34);
+            }
+        }
+    
+        a{
+            p{
+                border: 2px solid $white;
+                border-radius: 30px;
+                color: $white;
+                font-size: rem-calc(18);
+                line-height: rem-calc(20);
+                width: 100%;
+
+                @include md{
+                    font-size: rem-calc(23);
+                    line-height: rem-calc(28);
+                }
+
+                @include lg{
+                    font-size: rem-calc(32);
+                    line-height: rem-calc(38);
+                }
+            }
         }
     }
 }

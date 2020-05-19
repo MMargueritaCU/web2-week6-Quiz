@@ -2,65 +2,190 @@
     Section 3
 ============= */
 #section-3{
+
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
+
     >section{
+        div{
+            h2{
+                font-size: rem-calc(35);
+                line-height: rem-calc(43);
+                text-align: center;
+
+                @include lg{
+                    font-size: rem-calc(45);
+                    line-height: rem-calc(55);
+                }
+            }
+        }
         #section-3-inside{
+
             @include md{
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-areas: "top middle";
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas: "top top middle middle"
+                                    ". bottom bottom .";
             }
-        }
-        #top{
-            #img{
-                background-image: url('../img/section-3/img.jpg');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                height: 400px;
+
+            @include lg{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas: "top middle bottom";
             }
-    
-            >div{
-                background-color: $light-grey;
+
+            #top{
+                padding: 0 20px;
+
+                #img{
+                    background-image: url('../img/section-3/img.jpg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 400px;
+
+                    @include md{
+                        height: 300px;
+                    }
+
+                    @include lg{
+                        height: 200px;
+                    }
+                }
+        
+                >div{
+                    background-color: $light-grey;
+                    margin-top: -30px;
+
+                    h3{
+                        font-size: rem-calc(24);
+                        line-height: rem-calc(29);
+                        padding-top: 30px;
+                        text-align: center;
+
+                        @include lg{
+                            font-size: rem-calc(28);
+                            line-height: rem-calc(35);
+                        }
+                    }
+
+                    p{
+                        font-size: rem-calc(16);
+                        line-height: rem-calc(19);
+                        padding: 0 20px;
+                    }
+
+                    h4{
+                        padding: 20px; 
+                    }
+                }
+        
+                @include md{
+                    grid-area: top;
+                }
             }
-    
-            @include md{
-                grid-area: top;
+        
+            #middle{
+                padding: 0 20px;
+
+                #img2{
+                    background-image: url('../img/section-3/letterpress.jpg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 400px;
+
+                    @include md{
+                        height: 300px;
+                    }
+
+                    @include lg{
+                        height: 200px;
+                    }
+                }
+        
+                >div{
+                    background-color: $light-grey;
+                    margin-top: -30px;
+
+                    h3{
+                        font-size: rem-calc(24);
+                        line-height: rem-calc(29);
+                        padding-top: 30px;
+                        text-align: center;
+
+                        @include lg{
+                            font-size: rem-calc(28);
+                            line-height: rem-calc(35);
+                        }
+                    }
+
+                    p{
+                        font-size: rem-calc(16);
+                        line-height: rem-calc(19);
+                        padding: 0 20px;
+                    }
+
+                    h4{
+                        padding: 20px; 
+                    }
+                }
+        
+                @include md{
+                    grid-area: middle;
+                }
             }
-        }
-    
-        #middle{
-            #img2{
-                background-image: url('../img/section-3/letterpress.jpg');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                height: 400px;
-            }
-    
-            >div{
-                background-color: $light-grey;
-            }
-    
-            @include md{
-                grid-area: middle;
-            }
-        }
-    
-        #bottom{
-            #img3{
-                background-image: url('../img/section-3/cards.jpg');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                height: 400px;
-            }
-    
-            >div{
-                background-color: $light-grey;
-            }
-    
-            @include md{
-                grid-area: bottom;
+        
+            #bottom{
+                padding: 0 20px;
+
+                #img3{
+                    background-image: url('../img/section-3/cards.jpg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 400px;
+
+                    @include md{
+                        height: 300px;
+                    }
+
+                    @include lg{
+                        height: 200px;
+                    }
+                }
+        
+                >div{
+                    background-color: $light-grey;
+                    margin-top: -30px;
+
+                        h3{
+                            font-size: rem-calc(24);
+                            line-height: rem-calc(29);
+                            padding-top: 30px;
+                            text-align: center;
+
+                            @include lg{
+                                font-size: rem-calc(28);
+                                line-height: rem-calc(35);
+                            }
+                        }
+
+                        p{
+                            font-size: rem-calc(16);
+                            line-height: rem-calc(19);
+                            padding: 0 20px;
+                        }
+
+                        h4{
+                            padding: 20px; 
+                        }
+                }
+        
+                @include md{
+                    grid-area: bottom;
+                }
             }
         }
     }
